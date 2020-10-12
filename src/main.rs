@@ -114,15 +114,31 @@ fn main(){
     }
 
     println!("Start sorting!");
+
     let now = Instant::now();
-    bubble_sort(&numbers);
+    let result = bubble_sort(&numbers);
     println!("Bubble: Time (microsecs): {}; (secs): {}", now.elapsed().as_micros(), now.elapsed().as_secs());
+    if result == original_numbers{
+        println!("Sorted OK");
+    }else{
+        println!("Vector sorted wrong!")
+    }
 
     let now = Instant::now();
     shaker_sort(&numbers);
     println!("Shaker: Time (microsecs): {}; (secs): {}", now.elapsed().as_micros(), now.elapsed().as_secs());
+    if result == original_numbers{
+        println!("Sorted OK");
+    }else{
+        println!("Vector sorted wrong!")
+    }
 
     let now = Instant::now();
     selection_sort(&numbers);
     println!("Selection: Time (microsecs): {}; (secs): {}", now.elapsed().as_micros(), now.elapsed().as_secs());
+    if result == original_numbers{
+        println!("Sorted OK");
+    }else{
+        println!("Vector sorted wrong!")
+    }
 }
