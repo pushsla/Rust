@@ -102,6 +102,8 @@ fn selection_sort<T: Ord + Clone>(vec: &Vec<T>) -> Vec<T>{
     result
 }
 
+/// parallel
+
 fn main(){
     let mut rng = rand::thread_rng();
 
